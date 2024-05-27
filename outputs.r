@@ -40,37 +40,37 @@ library(ggplot2)
 source("multiplotfunction.r")  # loads function that plots multiple graphs onto the same page
 
 p1 <- ggplot(allout, aes(x=scenario, y=totpopsize)) + 
-  geom_violin(trim=T) +
+  geom_violin(trim=T, scale="width") +
   labs(x="Management scenario", y = "Total number of elephants") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
                  geom="pointrange", color="red")
 
 p2 <- ggplot(allout, aes(x=scenario, y=bigtuskers)) + 
-  geom_violin(trim=T) +
-  labs(x="Management scenario", y = "Number of bigtuskers left") +
+  geom_violin(trim=T, scale="width") +
+  labs(x="Management scenario", y = "Number of largetuskers left") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
                  geom="pointrange", color="red")
 
 p3 <- ggplot(allout, aes(x=scenario, y=oldbigtuskers)) + 
-  geom_violin(trim=T) +
-  labs(x="Management scenario", y = "Number of +55 bigtuskers left") +
+  geom_violin(trim=T, scale="width") +
+  labs(x="Management scenario", y = "Number of +55 largetuskers left") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
                  geom="pointrange", color="red")
 
 p4 <- ggplot(allout, aes(x=scenario, y=allkilledBT)) + 
-  geom_violin(trim=FALSE) +
-  labs(x="Management scenario", y = "Number of bigtuskers killed") +
+  geom_violin(trim=T, scale="width") +
+  labs(x="Management scenario", y = "Number of largetuskers killed") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
                  geom="pointrange", color="red")
 
 p5 <- ggplot(allout, aes(x=scenario, y=allkilledST)) + 
-  geom_violin(trim=T) +
+  geom_violin(trim=T, scale="width") +
   labs(x="Management scenario", y = "Number of smalltuskers killed") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
                  geom="pointrange", color="red")
 
 p6 <- ggplot(allout, aes(x=scenario, y=income)) + 
-  geom_violin(trim=T) +
+  geom_violin(trim=T, scale="width") +
   labs(x="Management scenario", y = "Income generated from permits") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
                  geom="pointrange", color="red")
@@ -113,37 +113,37 @@ library(ggplot2)
 source("multiplotfunction.r")  # loads function that plots multiple graphs onto the same page
 
 p1 <- ggplot(allout, aes(x=scenario, y=totpopsize)) + 
-  geom_violin(trim=T) +
+  geom_violin(trim=T, scale="width") +
   labs(x="Management scenario", y = "Total number of elephants") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
                geom="pointrange", color="red")
 
 p2 <- ggplot(allout, aes(x=scenario, y=bigtuskers)) + 
-  geom_violin(trim=T) +
-  labs(x="Management scenario", y = "Number of bigtuskers left") +
+  geom_violin(trim=T, scale="width") +
+  labs(x="Management scenario", y = "Number of largetuskers left") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
                geom="pointrange", color="red")
 
 p3 <- ggplot(allout, aes(x=scenario, y=oldbigtuskers)) + 
-  geom_violin(trim=T) +
-  labs(x="Management scenario", y = "Number of +55 bigtuskers left") +
+  geom_violin(trim=T, scale="width") +
+  labs(x="Management scenario", y = "Number of +55 largetuskers left") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
                geom="pointrange", color="red")
 
 p4 <- ggplot(allout, aes(x=scenario, y=allkilledBT)) + 
-  geom_violin(trim=FALSE) +
-  labs(x="Management scenario", y = "Number of bigtuskers killed") +
+  geom_violin(trim=T, scale="width") +
+  labs(x="Management scenario", y = "Number of largetuskers killed") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
                geom="pointrange", color="red")
 
 p5 <- ggplot(allout, aes(x=scenario, y=allkilledST)) + 
-  geom_violin(trim=T) +
+  geom_violin(trim=T, scale="width") +
   labs(x="Management scenario", y = "Number of smalltuskers killed") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
                geom="pointrange", color="red")
 
 p6 <- ggplot(allout, aes(x=scenario, y=income)) + 
-  geom_violin(trim=T) +
+  geom_violin(trim=T, scale="width") +
   labs(x="Management scenario", y = "Income generated from permits") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
                geom="pointrange", color="red")
