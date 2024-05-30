@@ -18,7 +18,7 @@ nyears<-50 # number of years we want to run the simulation for
 percquota <- 0.5  # percent offtake, based on total population
 # errorrate <- 0.01  # number of big tuskers illegally killed for every allowed small tusker
 
-nsims <- 100  # number of simulations
+nsims <- 1000  # number of simulations
 
 permitbig <- 20000  # permit price for large tuskers
 permitsmall<-2000   # permit price for small tuskers
