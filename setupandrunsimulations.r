@@ -16,6 +16,11 @@ rm(list=ls())  # clear workspace
 
 nyears<-50 # number of years we want to run the simulation for
 percquota <- 0.5  # percent offtake, based on total population
+
+# The model is set up to include illegal killing of big tuskers, 
+# i.e. hunters purchase a permit for a small tusker but then accidentally kill a big tusker
+# This feature is currently not run, however. To activate it, set the errorrate below and
+# you would also need to uncomment (and check) some code in the 'recessivemodel.R' and 'dominantmodel.R' files
 # errorrate <- 0.01  # number of big tuskers illegally killed for every allowed small tusker
 
 nsims <- 1000  # number of simulations
@@ -75,7 +80,7 @@ initialpoulationsize.LLf <- round(females * p ^ 2)  # LL cows
 initialpoulationsize.SSm <- round(males * (1-p) ^ 2)  # SS bulls
 initialpoulationsize.SSf <- round(females * (1-p) ^ 2)  # SS cows
 
-source("dominantmodel.R")
+source("dominantmodel.R") # read in function that does the simulation
 
 for (sc in 1:6){ # the loop runs all scenarios
 output <- dominantmodel(scenario=sc,  # management scenario
@@ -108,7 +113,7 @@ initialpoulationsize.LLf <- round(females * p ^ 2)  # LL cows
 initialpoulationsize.SSm <- round(males * (1-p) ^ 2)  # SS bulls
 initialpoulationsize.SSf <- round(females * (1-p) ^ 2)  # SS cows
 
-source("recessivemodel.R")
+source("recessivemodel.R") # read in function that does the simulation
 
 for (sc in 1:6){ # the loop runs all scenarios
   output <- recessivemodel(scenario=sc,  # management scenario

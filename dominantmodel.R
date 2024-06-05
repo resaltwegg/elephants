@@ -1,8 +1,6 @@
 # function that sets up matrices and runs the model
 # DOMINANT inheritance
 
-# this function includes the updated demography and scenarios based on Jeanetta's email from 21 August
-
 dominantmodel <- function(scenario=1,  # management scenario
                           nsims, nyears, percquota, errorrate, # number and length of simulations, quotapercent and illegal big-tusker hunt
                           surv1.m, surv2_10.m, surv11_16.m, surv15plus.m, # survival males

@@ -10,7 +10,7 @@ source("setupandrunsimulations.r")
 # 
 # --------------------- dominant inheritance -------------------------------------
 
-# first want to collate all outputs into a dta frame called "allout"
+# first want to collate all outputs into a data frame called "allout"
 load("dominant_scenario1.RData")
 allout <- output
 
@@ -83,7 +83,7 @@ dev.off()
 # 
 # --------------------- recessive inheritance ------------------------------------
 
-# first want to collate all outputs into a dta frame called "allout"
+# first want to collate all outputs into a data frame called "allout"
 load("recessive_scenario1.RData")
 allout <- output
 
