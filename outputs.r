@@ -43,40 +43,46 @@ p1 <- ggplot(allout, aes(x=scenario, y=totpopsize)) +
   geom_violin(trim=T, scale="width") +
   labs(x="Management scenario", y = "Total number of elephants") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
-                 geom="pointrange", color="red")
+                 geom="pointrange", color="red") +
+  annotate("text", x=0.7, y=8100, label="a)", size=5)
 
 p2 <- ggplot(allout, aes(x=scenario, y=bigtuskers)) + 
   geom_violin(trim=T, scale="width") +
   labs(x="Management scenario", y = "Number of largetuskers left") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
-                 geom="pointrange", color="red")
+                 geom="pointrange", color="red") +
+  annotate("text", x=0.7, y=850, label="b)", size=5)
 
 p3 <- ggplot(allout, aes(x=scenario, y=oldbigtuskers)) + 
   geom_violin(trim=T, scale="width") +
   labs(x="Management scenario", y = "Number of +55 largetuskers left") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
-                 geom="pointrange", color="red")
+                 geom="pointrange", color="red") +
+  annotate("text", x=0.7, y=40, label="c)", size=5)
 
 p4 <- ggplot(allout, aes(x=scenario, y=allkilledBT)) + 
   geom_violin(trim=T, scale="width") +
   labs(x="Management scenario", y = "Number of largetuskers killed") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
-                 geom="pointrange", color="red")
+                 geom="pointrange", color="red") +
+  annotate("text", x=0.7, y=500, label="d)", size=5)
 
 p5 <- ggplot(allout, aes(x=scenario, y=allkilledST)) + 
   geom_violin(trim=T, scale="width") +
   labs(x="Management scenario", y = "Number of smalltuskers killed") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
-                 geom="pointrange", color="red")
+                 geom="pointrange", color="red") +
+  annotate("text", x=0.7, y=1350, label="e)", size=5)
 
 p6 <- ggplot(allout, aes(x=scenario, y=income)) + 
   geom_violin(trim=T, scale="width") +
   labs(x="Management scenario", y = "Income generated from permits") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
-                 geom="pointrange", color="red")
+                 geom="pointrange", color="red") +
+  annotate("text", x=0.7, y=11500000, label="f)", size=5)
 
 pdf("output_dominant3.pdf")
-multiplot(p1, p2, p3, p4, p5, p6, cols=2)
+multiplot(p1, p3, p5, p2, p4, p6, cols=2)
 dev.off()
 
 
@@ -116,40 +122,46 @@ p1 <- ggplot(allout, aes(x=scenario, y=totpopsize)) +
   geom_violin(trim=T, scale="width") +
   labs(x="Management scenario", y = "Total number of elephants") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
-               geom="pointrange", color="red")
+               geom="pointrange", color="red") +
+  annotate("text", x=0.7, y=8100, label="a)", size=5)
 
 p2 <- ggplot(allout, aes(x=scenario, y=bigtuskers)) + 
   geom_violin(trim=T, scale="width") +
   labs(x="Management scenario", y = "Number of largetuskers left") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
-               geom="pointrange", color="red")
+               geom="pointrange", color="red") +
+  annotate("text", x=0.7, y=850, label="b)", size=5)
 
 p3 <- ggplot(allout, aes(x=scenario, y=oldbigtuskers)) + 
   geom_violin(trim=T, scale="width") +
   labs(x="Management scenario", y = "Number of +55 largetuskers left") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
-               geom="pointrange", color="red")
+               geom="pointrange", color="red") +
+  annotate("text", x=0.7, y=40, label="c)", size=5)
 
 p4 <- ggplot(allout, aes(x=scenario, y=allkilledBT)) + 
   geom_violin(trim=T, scale="width") +
   labs(x="Management scenario", y = "Number of largetuskers killed") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
-               geom="pointrange", color="red")
+               geom="pointrange", color="red") +
+  annotate("text", x=0.7, y=550, label="d)", size=5)
 
 p5 <- ggplot(allout, aes(x=scenario, y=allkilledST)) + 
   geom_violin(trim=T, scale="width") +
   labs(x="Management scenario", y = "Number of smalltuskers killed") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
-               geom="pointrange", color="red")
+               geom="pointrange", color="red") +
+  annotate("text", x=0.7, y=1350, label="e)", size=5)
 
 p6 <- ggplot(allout, aes(x=scenario, y=income)) + 
   geom_violin(trim=T, scale="width") +
   labs(x="Management scenario", y = "Income generated from permits") +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), 
-               geom="pointrange", color="red")
+               geom="pointrange", color="red") +
+  annotate("text", x=0.7, y=11500000, label="f)", size=5)
 
 pdf("output_recessive3.pdf")
-multiplot(p1, p2, p3, p4, p5, p6, cols=2)
+multiplot(p1, p3, p5, p2, p4, p6, cols=2)
 dev.off()
 
 
